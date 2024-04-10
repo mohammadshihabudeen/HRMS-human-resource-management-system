@@ -1,46 +1,48 @@
 import React, { useState } from 'react';
 
-const EmployeeTable = () => {
+const ReportTable = () => {
     const [employees, setEmployees] = useState([
-        { id: 1000, firstName: "John", lastName: "Doe", jobTitle: "Software Engineer", employeeStatus: "Active", subunit: "Engineering", supervisor: "Jane Doe" },
-        { id: 1001, firstName: "Jane", lastName: "Doe", jobTitle: "Product Manager", employeeStatus: "Active", subunit: "Product", supervisor: "John Doe" },
-        { id: 1002, firstName: "Jane", lastName: "Doe", jobTitle: "Product Manager", employeeStatus: "Active", subunit: "Product", supervisor: "John Doe" }
-
+        { id: 1, reportName: "Sample Report", },
     ]);
 
     const [selectAll, setSelectAll] = useState(false);
 
     const handleSelectAllChange = () => {
         setSelectAll(!selectAll);
-        employees.forEach((employee) => {
-            employee.selected = !selectAll;
-        });
-        setEmployees([...employees]);
+        const updatedEmployees = employees.map(employee => ({ ...employee, selected: !selectAll }));
+        setEmployees(updatedEmployees);
     };
 
     const handleSelectChange = (id) => {
-        const newEmployees = employees.map((employee) => {
-            if (employee.id === id) {
-                return { ...employee, selected: !employee.selected };
-            }
-            return employee;
-        });
-        setEmployees(newEmployees);
+        const updatedEmployees = employees.map(employee =>
+            employee.id === id ? { ...employee, selected: !employee.selected } : employee
+        );
+        setEmployees(updatedEmployees);
+    };
+
+    const handleRun = () => {
+        
+        console.log("Run");
+    };
+
+    const handleEdit = (reportName) => {
+
+        console.log("Edited:", reportName);
     };
 
     return (
-        <div>
+        <div className='m-2'>
             <div className="btn-group me-3 mt-2">
-                <button type="submit" className="btn text-white" style={{ backgroundColor: "#BFCC5E" }}>Add</button>
+                <button type="submit" className="btn text-white" style={{ backgroundColor: "#999b30" }}>Add</button>
             </div>
             <div className="btn-group me-3 mt-2">
                 <button type="submit" className="btn btn-secondary">Delete</button>
             </div>
             <hr />
-            <table className="table table-striped wrap z-n1">
+            <table className="table table-striped wrap z-n1 ">
                 <thead className="table-primary ">
                     <tr>
-                        <th scope="col">
+                        <th scope="col" className='col-1'>
                             <div className="form-check">
                                 <input
                                     className="form-check-input"
@@ -51,13 +53,9 @@ const EmployeeTable = () => {
                                 />
                             </div>
                         </th>
-                        <th scope="col">Id</th>
-                        <th scope="col">First (& Middle) Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">Job Title</th>
-                        <th scope="col">Employee Status</th>
-                        <th scope="col">Subunit</th>
-                        <th scope="col">Supervisor</th>
+                        <th scope="col"className='col-7'>Report Name</th>
+                        <th scope="col"className='col-2'></th>
+                        <th scope="col"className='col-2'></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -74,19 +72,23 @@ const EmployeeTable = () => {
                                     />
                                 </div>
                             </td>
-                            <td>{employee.id}</td>
-                            <td>{employee.firstName}</td>
-                            <td>{employee.lastName}</td>
-                            <td>{employee.jobTitle}</td>
-                            <td>{employee.employeeStatus}</td>
-                            <td>{employee.subunit}</td>
-                            <td>{employee.supervisor}</td>
+                            <td>{employee.reportName}</td>
+                            <td>
+                                <a href="#" style={{ color: 'black' }} onClick={handleRun}>
+                                    Run
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" style={{ color: 'black' }} onClick={() => handleEdit(employee.reportName)}>
+                                    Edit
+                                </a>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </div>
     );
-};
+}
 
-export default EmployeeTable;
+export default ReportTable;

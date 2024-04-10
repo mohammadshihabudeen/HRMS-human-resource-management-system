@@ -45,26 +45,26 @@ const EmployeeForm = () => {
         <>
             <div className='container-fluid '>
                 <form action="" onSubmit={handleSubmit}>
-                    <div class="row g-4">
-                        <div class="col-md-3">
-                            <label class="form-label">Employee Name</label>
+                    <div className="row g-4">
+                        <div className="col-md-3">
+                            <label className="form-label">Employee Name</label>
                             <input type="text"
                                 className="form-control"
                                 name="employeename"
                                 value={employee.employeename}
                                 onChange={handleChange} />
                         </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Id</label>
+                        <div className="col-md-3">
+                            <label className="form-label">Id</label>
                             <input type="text"
                                 className="form-control"
                                 name="id"
                                 value={employee.id}
                                 onChange={handleChange} />
                         </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Employee Status</label>
-                            <select class="form-select" aria-label="Default select example"
+                        <div className="col-md-3">
+                            <label className="form-label">Employee Status</label>
+                            <select className="form-select" aria-label="Default select example"
                                 name="employeestatus"
                                 value={employee.employeestatus}
                                 onChange={handleChange} >
@@ -74,9 +74,9 @@ const EmployeeForm = () => {
                                 <option value="3">option 3</option>
                             </select>
                         </div>
-                        <div class="col-md-3  ">
-                            <label class="form-label">Include</label>
-                            <select class="form-select" aria-label="Default select example"
+                        <div className="col-md-3  ">
+                            <label className="form-label">Include</label>
+                            <select className="form-select" aria-label="Default select example"
                                 name="include"
                                 value={employee.include}
                                 onChange={handleChange} >
@@ -87,18 +87,18 @@ const EmployeeForm = () => {
                             </select>
                         </div>
                     </div>
-                    <div class="row g-4 mt-2">
-                        <div class="col-md-3">
-                            <label class="form-label">Supervisor Name</label>
+                    <div className="row g-4 mt-2">
+                        <div className="col-md-3">
+                            <label className="form-label">Supervisor Name</label>
                             <input type="text"
                                 className="form-control"
                                 name="supervisorname"
                                 value={employee.supervisorname}
                                 onChange={handleChange} />
                         </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Job Title</label>
-                            <select class="form-select" aria-label="Default select example"
+                        <div className="col-md-3">
+                            <label className="form-label">Job Title</label>
+                            <select className="form-select" aria-label="Default select example"
                                 name="jobtitle"
                                 value={employee.jobtitle}
                                 onChange={handleChange} >
@@ -108,9 +108,9 @@ const EmployeeForm = () => {
                                 <option value="3">option 3</option>
                             </select>
                         </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Sub Unit</label>
-                            <select class="form-select" aria-label="Default select example"
+                        <div className="col-md-3">
+                            <label className="form-label">Sub Unit</label>
+                            <select className="form-select" aria-label="Default select example"
                                 name="subunit"
                                 value={employee.subunit}
                                 onChange={handleChange} >
@@ -120,9 +120,9 @@ const EmployeeForm = () => {
                                 <option value="3">option 3</option>
                             </select>
                         </div>
-                        <div class="col-md-3  ">
-                            <label for="inputAddress2" class="form-label">Location</label>
-                            <select class="form-select" aria-label="Default select example"
+                        <div className="col-md-3  ">
+                            <label htmlForfor="inputAddress2" class="form-label">Location</label>
+                            <select className="form-select" aria-label="Default select example"
                                 name="location"
                                 value={employee.location}
                                 onChange={handleChange} >
@@ -133,12 +133,12 @@ const EmployeeForm = () => {
                             </select>
                         </div>
                     </div>
-                    <div>
-                    <hr class="mt-4"/>
+                    <div className=" employee-body">
+                    {/* <hr className="mt-4"/> */}
                     </div>
                     <FormButton/>
-                    <div class="btn-group  mt-2">
-                        <button type="reset" class="btn btn-secondary" onClick={resetForm}>Reset</button>
+                    <div className="btn-group  mt-2">
+                        <button type="reset" className="btn btn-secondary" onClick={resetForm}>Reset</button>
                     </div>
                 </form>
             </div>
