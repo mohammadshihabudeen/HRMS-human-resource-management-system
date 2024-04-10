@@ -50,7 +50,7 @@ const InputField = ({ label, name, required, type, value, onChange, addField, ne
                             value={newValue[0]} // Use newValue for the value of the select
                             onChange={handleInputChange} // Use handleInputChange for onChange
                         >
-                            {newValue.map((value) => (
+                            {value.map((value) => (
                                 <option key={value} value={value}>{value}</option>
                             ))}
                         </select>

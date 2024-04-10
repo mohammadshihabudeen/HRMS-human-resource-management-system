@@ -33,7 +33,7 @@ const ReportTable = () => {
     return (
         <div className='m-2'>
             <div className="btn-group me-3 mt-2">
-                <button type="submit" className="btn text-white" style={{ backgroundColor: "#999b30" }}>Add</button>
+                <a href='/Pim/Reports/ReportForm' type="submit" className="btn text-white" style={{ backgroundColor: "#999b30" }}  >Add</a>
             </div>
             <div className="btn-group me-3 mt-2">
                 <button type="submit" className="btn btn-secondary">Delete</button>

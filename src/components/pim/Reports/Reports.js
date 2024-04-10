@@ -3,6 +3,7 @@ import EmployeeReports from './EmployeeReports'
 import FormHeader from './FormHeader'
 import ReportTable from './ReportTable'
 import Footer from './footer'
+import ReportForm from './ReportForm'
 
 const Reports = () => {
     return (
@@ -19,6 +20,7 @@ const Reports = () => {
                 </div>
             </div>
             <Footer/>
+            {/* <ReportForm /> */}
         </>
     )
 }
