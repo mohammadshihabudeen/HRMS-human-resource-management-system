@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, useLocation ,Outlet} from 'react-router-dom';
-import './PimLayout.css'
+import { Link, Outlet, useLocation } from 'react-router-dom';
+import './PimLayout.css';
+
 const PimLayout = () => {
     const location = useLocation();
 
@@ -17,10 +18,10 @@ const PimLayout = () => {
                     <Link className={`nav-link ${location.pathname === "/Pim/AddEmployee" ? "pim-active" : ""}`} to="/Pim/AddEmployee">Add Employee</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className={`nav-link ${location.pathname === "/Pim/Reports" ? "pim-active" : ""}`} to="/Pim/Reports">Reports</Link>
+                    <Link className={`nav-link ${location.pathname.includes("/Pim/Reports") || location.pathname.includes("/Pim/Reports/ReportForm") ?  "pim-active" : ""}`} to="/Pim/Reports">Reports</Link>
                 </li>
             </ul>
-            <Outlet /> {/* Renders the nested routes */}
+            <Outlet />
         </div>
     );
 };

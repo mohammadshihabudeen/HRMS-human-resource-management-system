@@ -121,7 +121,7 @@ const EmployeeForm = () => {
                             </select>
                         </div>
                         <div className="col-md-3  ">
-                            <label htmlForfor="inputAddress2" class="form-label">Location</label>
+                            <label htmlFor="inputAddress2" class="form-label">Location</label>
                             <select className="form-select" aria-label="Default select example"
                                 name="location"
                                 value={employee.location}
