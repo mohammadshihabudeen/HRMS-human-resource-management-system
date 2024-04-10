@@ -1,0 +1,21 @@
+.pim-nav-tabs {
+    background-color: #82bcee !important;
+    color: white !important;
+
+}
+
+.pim-nav-tabs .nav-item .nav-link {
+    margin-top: 4px; /* Reduce top margin to decrease height */
+    margin-bottom: 4px; /* Reduce bottom margin to decrease height */
+    padding: 3px 7px 5px 7px  !important;
+    margin-left: 5px !important;
+    color: white !important;
+}
+
+.pim-active {
+    border-radius: 3px;
+    background-color: #4d4e52!important;
+    color: white !important;
+    margin-top: 0; /* Remove top margin for the active tab */
+    margin-bottom: 0; /* Remove bottom margin for the active tab */
+}

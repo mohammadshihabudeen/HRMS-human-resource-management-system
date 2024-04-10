@@ -1,0 +1,8 @@
+.form-header{
+    border-bottom: 2px solid rgb(236, 236, 236);
+}
+.card{
+    border: 2px solid rgb(236, 236, 236);
+    border-radius: 5px;
+    background-color: #f6f6f6 !important;
+}
