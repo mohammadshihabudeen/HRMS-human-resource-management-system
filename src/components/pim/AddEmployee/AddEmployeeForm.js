@@ -109,7 +109,7 @@ const AddEmployeeForm = () => {
                 {/* Submit Button */}
                 <div className="row">
                     <div className="col-md-2">
-                        <button type="submit" className="submit-btn">
+                        <button type="submit" className="primary-btn">
                             Save
                         </button>
                     </div>

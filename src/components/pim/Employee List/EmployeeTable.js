@@ -30,11 +30,13 @@ const EmployeeTable = () => {
 
     return (
         <div>
-            <div className="btn-group me-3 mt-2">
-                <button type="submit" className="btn text-white" style={{ backgroundColor: "#AFBB4F" }}>Add</button>
+            <div className='row'>
+            <div className="col-md-1 py-2 ">
+                <button type="submit" className="primary-btn" >Add</button>
             </div>
-            <div className="btn-group me-3 mt-2">
-                <button type="submit" className="btn btn-secondary">Delete</button>
+            <div className="col-md-1 py-2">
+                <button type="submit" className="cancel-btn">Delete</button>
+            </div>
             </div>
             <hr />
             <table className="table table-striped wrap z-n1">

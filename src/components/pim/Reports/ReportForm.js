@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import InputField from './InputField';
-import './Reports.css'
 import Header from './Header';
+import InputField from './InputField';
+import './Reports.css';
 const ReportForm = () => {
     // State variables to store form data
     const [formData, setFormData] = useState({
@@ -62,7 +62,7 @@ const ReportForm = () => {
                 {/* Submit Button */}
                 <div className="row">
                     <div className="col-md-1 py-2">
-                        <button type="submit" className="submit-btn">
+                        <button type="submit" className="primary-btn">
                             Save
                         </button>
                     </div>

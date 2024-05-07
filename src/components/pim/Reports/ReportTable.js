@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const ReportTable = () => {
     const [employees, setEmployees] = useState([
@@ -31,11 +30,13 @@ const ReportTable = () => {
 
     return (
         <div className='m-2'>
-            <div className="btn-group me-3 mt-2">
-                <Link to='/Pim/Reports/ReportForm' className="btn text-white" style={{ backgroundColor: "#999b30" }}>Add</Link>
-            </div>
-            <div className="btn-group me-3 mt-2">
-                <button type="submit" className="btn btn-secondary">Delete</button>
+            <div className='row'>
+                <div className=" col-md-1 py-2">
+                    <a className='primary-btn-link ' href="/Pim/Reports/ReportForm" >Add</a>
+                </div>
+                <div className="col-md-1 py-2">
+                    <button type="submit" className="cancel-btn">Delete</button>
+                </div>
             </div>
             <hr />
             <table className="table table-striped wrap z-n1 ">

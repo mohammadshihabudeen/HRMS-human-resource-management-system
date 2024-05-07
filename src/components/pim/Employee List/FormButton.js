@@ -3,8 +3,8 @@ const FormButton = () => {
 
   return (
     <>
-    <div className="btn-group me-3 mt-2">
-    <button type="search" className="btn text-white" style={{ backgroundColor: "#999b30" }}>Search</button>
+    <div className="col-md-1 py-2">
+    <button type="search" className="primary-btn" >Search</button>
     </div>
     
     </>

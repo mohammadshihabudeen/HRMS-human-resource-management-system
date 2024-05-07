@@ -136,9 +136,11 @@ const EmployeeForm = () => {
                     <div className=" employee-body">
                     {/* <hr className="mt-4"/> */}
                     </div>
+                    <div className="row">
                     <FormButton/>
-                    <div className="btn-group  mt-2">
-                        <button type="reset" className="btn btn-secondary" onClick={resetForm}>Reset</button>
+                    <div className="col-md-1 py-2">
+                        <button type="reset" className="cancel-btn" onClick={resetForm}>Reset</button>
+                    </div>
                     </div>
                 </form>
             </div>
