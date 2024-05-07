@@ -2,6 +2,7 @@ import React from 'react'
 import EmployeeForm from './EmployeeForm'
 import EmployeeTable from './EmployeeTable'
 import FormHeader from './FormHeader'
+import "./EmployeeList.css"
 const EmployeeList = () => {
     return (
         <>

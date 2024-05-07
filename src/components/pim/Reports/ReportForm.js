@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputField from './InputField';
+import './Reports.css'
 import Header from './Header';
 const ReportForm = () => {
     // State variables to store form data
