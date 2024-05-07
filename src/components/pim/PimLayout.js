@@ -1,24 +1,23 @@
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import './PimLayout.css';
-
+import HeaderStyle from '../Header/Header.module.css'
 const PimLayout = () => {
     const location = useLocation();
 
     return (
         <div>
-            <ul className="nav pim-nav-tabs">
-                <li className="nav-item">
-                    <Link className={`nav-link ${location.pathname === "/Pim" ? "pim-active" : ""}`} to="/Pim">Configuration</Link>
+            <ul  className={HeaderStyle.pim_nav_tabs}>
+                <li className={HeaderStyle.nav_item}>
+                    <Link className={`${HeaderStyle.nav_link1} ${location.pathname === "/Pim" ? HeaderStyle.pim_active : ""}`} to="/Pim">Configuration</Link>
                 </li>
-                <li className="nav-item">
-                    <Link className={`nav-link ${location.pathname === "/Pim/EmployeeList" ? "pim-active" : ""}`} to="/Pim/EmployeeList">Employee List</Link>
+                <li className={HeaderStyle.nav_item}>
+                    <Link className={`${HeaderStyle.nav_link1} ${location.pathname === "/Pim/EmployeeList" ? HeaderStyle.pim_active : ""}`} to="/Pim/EmployeeList">Employee List</Link>
                 </li>
-                <li className="nav-item">
-                    <Link className={`nav-link ${location.pathname === "/Pim/AddEmployee" ? "pim-active" : ""}`} to="/Pim/AddEmployee">Add Employee</Link>
+                <li className={HeaderStyle.nav_item}>
+                    <Link className={`${HeaderStyle.nav_link1} ${location.pathname === "/Pim/AddEmployee" ? HeaderStyle.pim_active : ""}`} to="/Pim/AddEmployee">Add Employee</Link>
                 </li>
-                <li className="nav-item">
-                    <Link className={`nav-link ${location.pathname.includes("/Pim/Reports") || location.pathname.includes("/Pim/Reports/ReportForm") ?  "pim-active" : ""}`} to="/Pim/Reports">Reports</Link>
+                <li className={HeaderStyle.nav_item}>
+                    <Link className={`${HeaderStyle.nav_link1} ${location.pathname.includes("/Pim/Reports") || location.pathname.includes("/Pim/Reports/ReportForm") ?  HeaderStyle.pim_active : ""}`} to="/Pim/Reports">Reports</Link>
                 </li>
             </ul>
             <Outlet />
