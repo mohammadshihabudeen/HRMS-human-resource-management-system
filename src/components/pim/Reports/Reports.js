@@ -8,14 +8,14 @@ import ReportForm from './ReportForm'
 const Reports = () => {
     return (
         <>
-            <div className="card mt-2 m-4" style={{ backgroundColor: "#F5F5F5" }}>
+            <div className="top-card">
                 <FormHeader/>
-                <div className="card-body">
+                <div className="p-3">
                     <EmployeeReports />
                 </div>
             </div>
-            <div className="card  mt-3 m-4" style={{ backgroundColor: "#F5F5F5" }}>
-                <div className="card-body">
+            <div className="top-card">
+                <div className="p-3">
                     <ReportTable/>
                 </div>
             </div>

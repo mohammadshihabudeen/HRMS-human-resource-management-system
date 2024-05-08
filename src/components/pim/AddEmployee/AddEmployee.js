@@ -4,7 +4,7 @@ import './AddEmployee.css'
 import AddEmployeeForm from './AddEmployeeForm'
 const AddEmployee = () => {
   return (
-    <div className='addemployee mt-3 m-4'>
+    <div className='top-card'>
       <Header />
       <AddEmployeeForm />
     </div>

@@ -690,7 +690,6 @@ code {
     flex-direction: row !important;
     justify-content: space-around;
     width: 170px;
-    padding-left: 10px;
   }
 }
 @media (min-width:992px) {
@@ -803,7 +802,7 @@ code {
   background-color: #999b30 !important;
   height: 2rem;
   border: 2px solid #abad29 !important;
-  border-radius: 5px;
+  border-radius: 3px;
   color: white;
   width: 4.25rem;
  cursor: pointer;
@@ -812,7 +811,7 @@ code {
   background-color: #999b30 !important;
   height: 1.7rem;
   border: 2px solid #abad29 !important;
-  border-radius: 5px;
+  border-radius: 3px;
   color: white;
   width: 4.25rem;
   text-align: center;
@@ -828,7 +827,7 @@ code {
   background-color: #868584 !important;
   height: 2rem;
   border: 2px solid #797979 !important;
-  border-radius: 5px;
+  border-radius: 3px;
   color: white;
   width: 4.25rem;
   cursor: pointer;
@@ -838,5 +837,21 @@ code {
   flex-direction: column;
   justify-content: space-around;
   width: 170px;
-  padding-left: 10px;
+}
+.top-card{
+  border: 2px solid rgb(236, 236, 236);
+  border-radius: 5px;
+  background-color: #f6f6f6 !important;
+  margin: 1.5rem !important;
+  margin-top: 1rem;
+}
+.top-card-title{
+  border-bottom: 2px solid rgb(236, 236, 236);
+}
+.top-card-title p{
+  letter-spacing: -0.7px;
+  margin: 18px;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
 }

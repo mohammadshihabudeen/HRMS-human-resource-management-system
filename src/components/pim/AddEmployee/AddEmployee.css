@@ -1,14 +1,3 @@
-.addemp p{
-    letter-spacing: -0.7px;
-}
-.addemp{
-    border-bottom: 2px solid rgb(236, 236, 236);
-}
-.addemployee{
-    border: 2px solid rgb(236, 236, 236);
-    border-radius: 5px;
-    background-color: #f6f6f6 !important;
-}
 .inputName{
 font-size: 12px;
 margin-left: 40px;

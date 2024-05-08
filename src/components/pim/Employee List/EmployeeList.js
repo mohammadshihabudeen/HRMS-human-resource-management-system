@@ -6,14 +6,14 @@ import "./EmployeeList.css"
 const EmployeeList = () => {
     return (
         <>
-            <div className="card mt-3 m-4" style={{ backgroundColor: "#F5F5F5" }}>
+            <div className='top-card'>
                 <FormHeader />
-                <div className="card-body">
+                <div className="p-3">
                     <EmployeeForm />
                 </div>
             </div>
-            <div className="card  mt-3 m-4" style={{ backgroundColor: "#F5F5F5" }}>
-                <div className="card-body">
+            <div className='top-card'>
+                <div className="p-3">
                     <EmployeeTable />
                 </div>
             </div>
