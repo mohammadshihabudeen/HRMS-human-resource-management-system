@@ -30,13 +30,13 @@ const EmployeeTable = () => {
 
     return (
         <div>
-            <div className='row'>
-            <div className="col-md-1 py-2 ">
-                <button type="submit" className="primary-btn" >Add</button>
-            </div>
-            <div className="col-md-1 py-2">
-                <button type="submit" className="cancel-btn">Delete</button>
-            </div>
+            <div className="button-group">
+                <div className="py-2">
+                    <button type="search" className="primary-btn" >Add</button>
+                </div>
+                <div className="py-2">
+                    <button type="reset" className="cancel-btn" >delete</button>
+                </div>
             </div>
             <hr />
             <table className="table table-striped wrap z-n1">

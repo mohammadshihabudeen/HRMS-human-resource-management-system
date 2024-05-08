@@ -29,17 +29,17 @@ const ReportTable = () => {
     };
 
     return (
-        <div className='m-2'>
-            <div className='row'>
-                <div className=" col-md-1 py-2">
+        <div >
+            <div className="button-group">
+                <div className="py-2">
                     <a className='primary-btn-link ' href="/Pim/Reports/ReportForm" >Add</a>
                 </div>
-                <div className="col-md-1 py-2">
-                    <button type="submit" className="cancel-btn">Delete</button>
+                <div className="py-2">
+                    <button type="reset" className="cancel-btn" >delete</button>
                 </div>
             </div>
             <hr />
-            <table className="table table-striped wrap z-n1 ">
+            <table className="table table-striped wrap z-n1 m-2">
                 <thead className="table-primary ">
                     <tr>
                         <th scope="col" className='col-1'>

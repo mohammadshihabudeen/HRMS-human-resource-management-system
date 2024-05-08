@@ -60,13 +60,13 @@ const ReportForm = () => {
                 <hr />
                 {errorMessage && <div className="alert alert-danger">{errorMessage} onChange={handleSelectChange}</div>}
                 {/* Submit Button */}
-                <div className="row">
-                    <div className="col-md-1 py-2">
+                <div className="button-group" style={{paddingLeft:0}}>
+                    <div className="py-2">
                         <button type="submit" className="primary-btn">
                             Save
                         </button>
                     </div>
-                    <div className="col-md-1 py-2">
+                    <div className="py-2">
                         <button type="submit" className="cancel-btn">
                             Cancel
                         </button>

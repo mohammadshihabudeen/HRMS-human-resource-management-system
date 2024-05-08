@@ -107,12 +107,10 @@ const AddEmployeeForm = () => {
                 <hr />
                 {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
                 {/* Submit Button */}
-                <div className="row">
-                    <div className="col-md-2">
+                <div className="button-group" style={{paddingLeft:0,justifyContent:"flex-start"}}>
                         <button type="submit" className="primary-btn">
                             Save
                         </button>
-                    </div>
                 </div>
             </form>
         </div>

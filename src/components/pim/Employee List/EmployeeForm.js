@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import FormButton from "./FormButton";
 
 const EmployeeForm = () => {
     const [employee, setEmployee] = useState({
@@ -134,13 +133,15 @@ const EmployeeForm = () => {
                         </div>
                     </div>
                     <div className=" employee-body">
-                    {/* <hr className="mt-4"/> */}
+                        {/* <hr className="mt-4"/> */}
                     </div>
-                    <div className="row">
-                    <FormButton/>
-                    <div className="col-md-1 py-2">
-                        <button type="reset" className="cancel-btn" onClick={resetForm}>Reset</button>
-                    </div>
+                    <div className="button-group">
+                        <div className="py-2">
+                            <button type="search" className="primary-btn" >Search</button>
+                        </div>
+                        <div className="py-2">
+                            <button type="reset" className="cancel-btn" onClick={resetForm}>Reset</button>
+                        </div>
                     </div>
                 </form>
             </div>
