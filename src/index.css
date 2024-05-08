@@ -819,5 +819,21 @@ code {
     height: 28px !important;
     padding: 0px 6px;
     width: 80%;
+}
+.table {
+  caption-side: bottom;
+  border-collapse: collapse;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table tbody>tr:nth-of-type(odd)>* {
+  color: black;
+}
 
+.table tbody>tr:nth-of-type(even)>* {
+ background-color:#ffffff  ;
+}
+.table thead{
+  color: black;
+  background-color: #D6EAF8 ;
 }
