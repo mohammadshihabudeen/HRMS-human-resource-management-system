@@ -39,8 +39,8 @@ const EmployeeTable = () => {
                 </div>
             </div>
             <hr />
-            <table className="table table-striped wrap z-n1">
-                <thead className="table-primary ">
+            <table className="table ">
+                <thead>
                     <tr>
                         <th scope="col">
                             <div className="form-check">
