@@ -784,7 +784,6 @@ code {
   font-weight: 500;
   font-size: 1.5rem;
 }
-<<<<<<< HEAD
 .form-input{
   display: block;
   padding: 3px 6px;
@@ -821,22 +820,4 @@ code {
     padding: 0px 6px;
     width: 80%;
 
-=======
-.table {
-  caption-side: bottom;
-  border-collapse: collapse;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.table tbody>tr:nth-of-type(odd)>* {
-  color: black;
-}
-
-.table tbody>tr:nth-of-type(even)>* {
- background-color:#ffffff  ;
-}
-.table thead{
-  color: black;
-  background-color: #D6EAF8 ;
->>>>>>> 71f909dd033ec935a0d224f3810f360e1ae7f306
 }
