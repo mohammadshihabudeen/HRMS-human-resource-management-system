@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputField = ({ label, name, required, type, value, onChange }) => {
     return (
-        <div className="mb-3 row">
+        <div className="mb-4 row">
             <label htmlFor={name} className="col-sm-2 col-form-label text-nowrap">
                 {required ? (
                     <>
@@ -17,7 +17,7 @@ const InputField = ({ label, name, required, type, value, onChange }) => {
                     type === 'dropdown' ? (
                         <div className="dropdown">
                             <select
-                                className="form-select"
+                                className="form-input-select"
                                 aria-label="Default select example"
                                 name={name}
                                 value={value}
@@ -30,7 +30,7 @@ const InputField = ({ label, name, required, type, value, onChange }) => {
                     ) : (
                         <input
                             type={type}
-                            className="form-control"
+                            className={type != "checkbox" ? "form-input" : 'form-input-checkbox'} 
                             name={name}
                             id={name}
                             value={value}
@@ -39,7 +39,7 @@ const InputField = ({ label, name, required, type, value, onChange }) => {
                         />
                     )
                 }
-                {type == 'file' ? <p className='required text-nowrap'>Accepts jpg, png, gif up to 1MB Recommended dimensions: 200px X 200px</p> : ''}
+                {type == 'file' ? <p className='required'>Accepts jpg, png, gif up to 1MB Recommended dimensions: 200px X 200px</p> : ''}
 
             </div>
         </div>

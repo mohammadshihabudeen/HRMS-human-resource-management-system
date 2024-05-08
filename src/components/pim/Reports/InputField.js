@@ -30,7 +30,7 @@ const InputField = ({ label, name, required, type, value, onChange, addField, ne
     };
 
     return (
-        <div className="row">
+        <div className="row mb-3">
             <label htmlFor={name} className="col-sm-2 col-form-label text-nowrap">
                 {required ? (
                     <>
@@ -44,7 +44,7 @@ const InputField = ({ label, name, required, type, value, onChange, addField, ne
                 {type === 'dropdown' ? (
                     <div className="dropdown">
                         <select
-                            className="form-select"
+                            className="form-input-select"
                             aria-label="Default select example"
                             name={name}
                             value={newValue[0]} // Use newValue for the value of the select
@@ -58,7 +58,7 @@ const InputField = ({ label, name, required, type, value, onChange, addField, ne
                 ) : (
                     <input
                         type={type}
-                        className="form-control"
+                        className="form-input"
                         name={name}
                         id={name}
                         onChange={handleInputChange}
@@ -70,7 +70,7 @@ const InputField = ({ label, name, required, type, value, onChange, addField, ne
                 {showInputField && (
                     <input
                         type="text"
-                        className="form-control placetext"
+                        className="form-input placetext"
                         value={newOption}
                         placeholder='Enter new option'
                         onChange={handleInputTextChange} // Use handleInputTextChange for input onChange
@@ -79,7 +79,7 @@ const InputField = ({ label, name, required, type, value, onChange, addField, ne
                 {newRequired && (
                     <a
                         type="button"
-                        className="text-dark"
+                        className="add-btn"
                         onClick={() => {
                             setShowInputField(!showInputField); // Toggle visibility of input field
                             if (showInputField) {
@@ -91,7 +91,7 @@ const InputField = ({ label, name, required, type, value, onChange, addField, ne
                     </a>
                 )}
             </div>
-            <hr className='mt-2' />
+            <hr className='mt-3' />
         </div>
     );
 };

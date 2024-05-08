@@ -35,7 +35,7 @@ const EmployeeReports = () => {
                         </div>
                         <div className="col-md-3 ">
                             <input type="text"
-                                className="form-control"
+                                className="form-input"
                                 name="reportname"
                                 value={employee.reportname}
                                 onChange={handleChange} />

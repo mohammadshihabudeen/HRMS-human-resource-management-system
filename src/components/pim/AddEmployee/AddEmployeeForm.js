@@ -9,6 +9,7 @@ const AddEmployeeForm = () => {
         lastName: '',
         empid: '',
         photo: '',
+        login: false,
         uname: '',
         pword1: '',
         pword2: '',
@@ -18,14 +19,19 @@ const AddEmployeeForm = () => {
 
     // Event handler to update form data
     const handleInputChange = (e) => {
-        const { name, value, } = e.target;
+        const { name, value, type, checked } = e.target;
         if (name==="photo"){
             console.log(e.target.files);
             console.log(URL.createObjectURL(e.target.files[0]))
         }
+        const newValue = type === 'checkbox' ? checked : value;
         setFormData({
             ...formData,
             [name]: value
+        });
+        setFormData({
+            ...formData,
+            [name]: newValue
         });
     };
 
@@ -47,8 +53,8 @@ const AddEmployeeForm = () => {
         <div>
             <form className='p-3' onSubmit={handleSubmit}>
                 {/* Input fields */}
-                <div className="mb-2 row">
-                    <div className="col-md-2">
+                <div className="mb-4 row">
+                    <div className="col-md-2 pt-3">
                         <label htmlFor="firstName" className="col-form-label mt-4">Full Name</label>
                     </div>
                     <div className="col-md-2 col-sm-5">
@@ -56,9 +62,10 @@ const AddEmployeeForm = () => {
                         <label htmlFor="firstName" className="inputName"> <span className='text-danger'>*</span> First Name</label>
                         <input
                             type="text"
-                            className="form-control"
+                            className="form-input"
                             name="firstName"
                             id="inputName"
+                            style={{width:"85%"}}
                             value={formData.firstName}
                             onChange={handleInputChange}
                             required
@@ -68,8 +75,9 @@ const AddEmployeeForm = () => {
                     <div className="col-md-2 col-sm-5">
                         <label htmlFor="middleName" className="inputName">Middle Name</label>
                         <input
+                            style={{width:"85%"}}
                             type="text"
-                            className="form-control"
+                            className="form-input"
                             name="middleName"
                             id="inputMiddleName"
                             value={formData.middleName}
@@ -80,8 +88,9 @@ const AddEmployeeForm = () => {
                     <div className="col-md-2 col-sm-5">
                         <label htmlFor="lastName" className="inputName"> <span className='text-danger'>*</span> Last Name</label>
                         <input
+                            style={{width:"85%"}}
                             type="text"
-                            className="form-control"
+                            className="form-input"
                             name="lastName"
                             id="inputLastName"
                             value={formData.lastName}
@@ -94,6 +103,7 @@ const AddEmployeeForm = () => {
                 <InputField label={"Employee Id"} name={"empid"} required={false} type={"text"} value={formData.empid} onChange={handleInputChange} />
                 {/* Photograph */}
                 <InputField label={"Photograph"} name={"photo"} required={false} type={"file"} value={formData.photo} onChange={handleInputChange} />
+                <InputField label={"Create Login Details"} name={"login"} required={false} type={"checkbox"} value={formData.login} onChange={handleInputChange} />
                 {/* User Name */}
                 <InputField label={"User Name"} name={"uname"} required={true} type={"text"} value={formData.uname} onChange={handleInputChange} />
                 {/* Password */}
