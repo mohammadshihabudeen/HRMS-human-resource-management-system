@@ -39,7 +39,7 @@ const EmployeeTable = () => {
                 </div>
             </div>
             <hr />
-            <table className="table ">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">

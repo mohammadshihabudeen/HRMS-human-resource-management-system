@@ -820,20 +820,43 @@ code {
     padding: 0px 6px;
     width: 80%;
 }
+.label{
+    margin-bottom: 10px !important;
+}
 .table {
   caption-side: bottom;
   border-collapse: collapse;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  z-index: -999;
+  border-bottom: 1px solid #e7e6e6;
+ 
 }
 .table tbody>tr:nth-of-type(odd)>* {
   color: black;
+  border-bottom: 1px solid #e7e6e6;
+  background-color:#f3f3f3  ;
+ 
 }
 
 .table tbody>tr:nth-of-type(even)>* {
  background-color:#ffffff  ;
+ border-bottom: 1px solid #e7e6e6;
 }
 .table thead{
   color: black;
   background-color: #D6EAF8 ;
+  text-align: left;
+  border-bottom: 1px solid #e7e6e6;
+}
+.table th,td{
+  padding: 8px;
+}
+@media (max-width: 768px) {
+  .table {
+      overflow-x: auto;
+      display: block;
+  }
+
 }

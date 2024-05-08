@@ -46,9 +46,9 @@ const EmployeeForm = () => {
                 <form action="" onSubmit={handleSubmit}>
                     <div className="row g-4">
                         <div className="col-md-3">
-                            <label className="form-label">Employee Name</label>
+                            <label className="label">Employee Name</label>
                             <input type="text"
-                                className="form-input"
+                                className="form-input mt-3"
                                 name="employeename"
                                 value={employee.employeename}
                                 onChange={handleChange} />
@@ -56,14 +56,14 @@ const EmployeeForm = () => {
                         <div className="col-md-3">
                             <label className="form-label">Id</label>
                             <input type="text"
-                                className="form-input"
+                                className="form-input mt-3"
                                 name="id"
                                 value={employee.id}
                                 onChange={handleChange} />
                         </div>
                         <div className="col-md-3">
                             <label className="form-label">Employee Status</label>
-                            <select className="form-input-select" aria-label="Default select example"
+                            <select className="form-input-select mt-3" aria-label="Default select example"
                                 name="employeestatus"
                                 value={employee.employeestatus}
                                 onChange={handleChange} >
@@ -75,7 +75,7 @@ const EmployeeForm = () => {
                         </div>
                         <div className="col-md-3  ">
                             <label className="form-label">Include</label>
-                            <select className="form-input-select" aria-label="Default select example"
+                            <select className="form-input-select mt-3" aria-label="Default select example"
                                 name="include"
                                 value={employee.include}
                                 onChange={handleChange} >
@@ -90,14 +90,14 @@ const EmployeeForm = () => {
                         <div className="col-md-3">
                             <label className="form-label">Supervisor Name</label>
                             <input type="text"
-                                className="form-input"
+                                className="form-input mt-3"
                                 name="supervisorname"
                                 value={employee.supervisorname}
                                 onChange={handleChange} />
                         </div>
                         <div className="col-md-3">
                             <label className="form-label">Job Title</label>
-                            <select className="form-input-select" aria-label="Default select example"
+                            <select className="form-input-select mt-3" aria-label="Default select example"
                                 name="jobtitle"
                                 value={employee.jobtitle}
                                 onChange={handleChange} >
@@ -109,7 +109,7 @@ const EmployeeForm = () => {
                         </div>
                         <div className="col-md-3">
                             <label className="form-label">Sub Unit</label>
-                            <select className="form-input-select" aria-label="Default select example"
+                            <select className="form-input-select mt-3" aria-label="Default select example"
                                 name="subunit"
                                 value={employee.subunit}
                                 onChange={handleChange} >
@@ -121,7 +121,7 @@ const EmployeeForm = () => {
                         </div>
                         <div className="col-md-3  ">
                             <label htmlFor="inputAddress2" class="form-label">Location</label>
-                            <select className="form-input-select" aria-label="Default select example"
+                            <select className="form-input-select mt-3" aria-label="Default select example"
                                 name="location"
                                 value={employee.location}
                                 onChange={handleChange} >
